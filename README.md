@@ -59,7 +59,6 @@ LangChain was employed to orchestrate the process of review generation because o
 
 ### Prompt Design:
 For each product and rating, we designed a dynamic prompt. For example:
-```plaintext
 "Write a detailed positive review for a product titled 'BComplex 50' in the 'Health & Household' category. Highlight its benefits, ease of use, and overall user satisfaction."
 
 
@@ -110,6 +109,7 @@ We took multiple steps to ensure the synthetic dataset was inspired by but not a
 Dynamic Prompting: Generated unique reviews using prompts tailored to product titles and categories.
 Randomization: Introduced randomness in review structure, sentiment intensity, and vocabulary to ensure originality.
 Perplexity Checks: Ensured that the GPT model was not simply repeating patterns by measuring the model's perplexity across generated reviews.
+
 9. Future Improvements
 Areas to Enhance:
 Improving Review Diversity: Incorporating more personalized stories and anecdotes to make reviews feel more human.
