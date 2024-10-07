@@ -28,10 +28,10 @@ The goal of this project was to generate a **synthetic dataset** of product revi
 ## 2. Data Cleaning and Preparation
 
 ### **Original Dataset**:
-We merged two datasets: product metadata (`parent_asin_x`, `title_y`, etc.) and the actual reviews (`asin`, `text`, `rating`, `user_id`, etc.). The merged dataset contained columns such as `asin`, `parent_asin_x`, `title_x`, `text`, `rating`, and more.
+I merged two datasets: product metadata (`parent_asin_x`, `title_y`, etc.) and the actual reviews (`asin`, `text`, `rating`, `user_id`, etc.). The merged dataset contained columns such as `asin`, `parent_asin_x`, `title_x`, `text`, `rating`, and more.
 
 ### **Cleaning Steps**:
-- **Removed Duplicates**: We removed any duplicate reviews to ensure that the dataset didn't contain redundant information.
+- **Removed Duplicates**: I removed any duplicate reviews to ensure that the dataset didn't contain redundant information.
 - **Missing Values**: Handled missing review text and product titles, ensuring every row in the dataset had sufficient information for review generation.
 
 ### **Columns in the Final Dataset**:
@@ -49,18 +49,18 @@ We merged two datasets: product metadata (`parent_asin_x`, `title_y`, etc.) and 
 
 ## 3. Experimentation and Methodology
 
-### Why We Used LangChain:
+### Why I Used LangChain:
 LangChain was employed to orchestrate the process of review generation because of its flexibility to manage complex prompts and chain tasks, offering a structured way to call GPT models (GPT-3.5-turbo). It helped in dynamically building prompts based on review ratings and generating diverse and personalized reviews.
 
 ### Experimentation:
-1. **Model**: We used GPT-3.5-turbo, accessed via LangChain, to generate both review titles and review text.
+1. **Model**: I used GPT-3.5-turbo, accessed via LangChain, to generate both review titles and review text.
 2. **Factors** considered while generating synthetic data:
    - **Review Length**: Varied to ensure the dataset contained both short and detailed reviews.
    - **Topic Diversity**: The reviews focused on different product features (e.g., effectiveness, ingredients, packaging).
    - **Sentiment Variety**: Ensured by generating distinct positive, neutral, and negative reviews.
 
 ### Prompt Design:
-For each product and rating, we designed a dynamic prompt. For example:
+For each product and rating, I designed a dynamic prompt. For example:
 "Write a detailed positive review for a product titled 'BComplex 50' in the 'Health & Household' category. Highlight its benefits, ease of use, and overall user satisfaction."
 
 ## 2. Use Case Diagram
@@ -105,9 +105,9 @@ The final synthetic dataset (`synthetic_reviews.csv`) consists of 10 rows, each 
 
 ## 7. Efficacy of the Synthetic Dataset
 
-### How We Measured Success:
+### How I Measured Success:
 
-- **Cosine Similarity**: We calculated the cosine similarity between the original and synthetic reviews, ensuring they were distinct (with an average similarity score < 0.5).
+- **Cosine Similarity**: I calculated the cosine similarity between the original and synthetic reviews, ensuring they were distinct (with an average similarity score < 0.5).
 
 - **Lexical Diversity**: The synthetic dataset showed higher lexical diversity, ensuring varied vocabulary and non-repetitive text.
 
@@ -115,7 +115,7 @@ The final synthetic dataset (`synthetic_reviews.csv`) consists of 10 rows, each 
 
 ## 8. Ensuring Originality in the Dataset
 
-We took multiple steps to ensure the synthetic dataset was inspired by, but not a replica of, the original dataset:
+I took multiple steps to ensure the synthetic dataset was inspired by, but not a replica of, the original dataset:
 
 - **Dynamic Prompting**: Generated unique reviews using prompts tailored to product titles and categories.
 
